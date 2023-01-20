@@ -1,6 +1,5 @@
 ﻿using MedGrupo.CrossCutting.Helper;
 using MedGrupo.Domain.Entities.Base;
-using MedGrupo.Domain.Enums;
 using MedGrupo.Domain.Validation;
 using System;
 
@@ -23,6 +22,7 @@ namespace MedGrupo.Domain.Entities
         public DateTime DateOfBirth { get; set; }
         public int Gender { get; set; }
         public bool Active { get; set; }
+        public int teste { get; set; }
         private void ValidationDomain(string name, DateTime dateOfBirth, int gender, bool active)
         {
             DomainExceptionValidation.When(name == null, "O nome é obrigatório. ");

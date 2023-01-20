@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace MedGrupo.Data.Context
 {
@@ -8,8 +9,12 @@ namespace MedGrupo.Data.Context
     {
         public MedGrupoContext CreateDbContext(string[] args)
         {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
             var optionsBuilder = new DbContextOptionsBuilder<MedGrupoContext>();
-            optionsBuilder.UseSqlServer("Server= MARCANASTER\\SQLEXPRESS; Initial Catalog = MedGrupo; Persist Security Info = True; User ID = marcanaster; Password = f0d@s481521; MultipleActiveResultSets = True");
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnetion"));
             return new MedGrupoContext(optionsBuilder.Options);
         }
     }

@@ -68,6 +68,7 @@ namespace MedGrupo.Data.Repository
             try
             {
                 if (entity.Id == Guid.Empty) entity.Create(Guid.NewGuid());
+
                 entity.CreatAt = DateTime.UtcNow;
                 _dataSet.Add(entity);
                 await _context.SaveChangesAsync();

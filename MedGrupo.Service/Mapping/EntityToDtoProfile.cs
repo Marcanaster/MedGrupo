@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using MedGrupo.Domain.Dtos.Contact;
+using MedGrupo.Domain.Dtos.User;
+using MedGrupo.Domain.Entities;
 
 namespace MedGrupo.Service.Mapping
 {
@@ -9,13 +9,13 @@ namespace MedGrupo.Service.Mapping
     {
         public EntityToDtoProfile()
         {
-            //CreateMap<UserDto, UserEntity>().ReverseMap();
-            //CreateMap<UserDtoCreateResult, UserEntity>().ReverseMap();
-            //CreateMap<UserDtoUpdateResult, UserEntity>().ReverseMap();
-            //CreateMap<UserDtoUpdateResult, UserEntity>().ReverseMap();
-            //CreateMap<AutorCreateDto, AutorEntity>().ReverseMap();
-            //CreateMap<LivroCreateDto, LivroEntity>().ReverseMap();
-            //CreateMap<GeneroCreateDto, GeneroEntity>().ReverseMap();
+            CreateMap<UserDto, UserEntity>().ReverseMap();
+            CreateMap<UserDtoCreateResult, UserEntity>().ReverseMap();
+            CreateMap<UserDtoUpdateResult, UserEntity>().ReverseMap();
+
+            CreateMap<ContactDto, ContactEntity>().ReverseMap();
+            //CreateMap<ContactCreateResult, ContactEntity>().ReverseMap();
+            //CreateMap<ContactUpdateResult, ContactEntity>().ReverseMap();
         }
     }
 }

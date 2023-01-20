@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <None Remove="Context\ContextFactory.cs~RF2aa615d8.TMP" />
+    <None Remove="Mapping\ContactMap.cs~RF2b144648.TMP" />
   </ItemGroup>
 
   <ItemGroup>

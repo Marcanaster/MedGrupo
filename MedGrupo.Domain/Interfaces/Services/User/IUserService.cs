@@ -1,4 +1,4 @@
-﻿using MedGrupo.Domain.Dtos;
+﻿using MedGrupo.Domain.Dtos.User;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

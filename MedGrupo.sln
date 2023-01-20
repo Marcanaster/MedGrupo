@@ -9,15 +9,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F26411
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastruture", "Infrastruture", "{5F7361E4-B37D-4C13-A58E-5E02736FC553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedGrupo.API", "MedGrupo.API\MedGrupo.API.csproj", "{C497EF4E-AC40-4EFE-8E93-63B385524043}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedGrupo.API", "MedGrupo.API\MedGrupo.API.csproj", "{C497EF4E-AC40-4EFE-8E93-63B385524043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedGrupo.Domain", "MedGrupo.Domain\MedGrupo.Domain.csproj", "{D872A596-DDDB-48F9-8A1A-6A4672FD4871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedGrupo.Domain", "MedGrupo.Domain\MedGrupo.Domain.csproj", "{D872A596-DDDB-48F9-8A1A-6A4672FD4871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedGrupo.CrossCutting", "MedGrupoCrossCutting\MedGrupo.CrossCutting.csproj", "{763CEE56-CD1D-4C53-8375-7754C1C2E15E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedGrupo.CrossCutting", "MedGrupoCrossCutting\MedGrupo.CrossCutting.csproj", "{763CEE56-CD1D-4C53-8375-7754C1C2E15E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedGrupo.Data", "MedGrupo.Data\MedGrupo.Data.csproj", "{33F7EC15-B73D-49D3-8802-640FE8EC015B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedGrupo.Data", "MedGrupo.Data\MedGrupo.Data.csproj", "{33F7EC15-B73D-49D3-8802-640FE8EC015B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedGrupo.Service", "MedGrupo.Service\MedGrupo.Service.csproj", "{CA83A321-7A4C-4F1E-9B65-434F3F2F0B39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedGrupo.Service", "MedGrupo.Service\MedGrupo.Service.csproj", "{CA83A321-7A4C-4F1E-9B65-434F3F2F0B39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A51087A8-F764-426B-AA11-0831F8AE189C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedGrupo.Test", "MedGrupo.Test\MedGrupo.Test.csproj", "{B6D6A759-9B0B-4D51-9D30-A657400B628E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{CA83A321-7A4C-4F1E-9B65-434F3F2F0B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA83A321-7A4C-4F1E-9B65-434F3F2F0B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA83A321-7A4C-4F1E-9B65-434F3F2F0B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D6A759-9B0B-4D51-9D30-A657400B628E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D6A759-9B0B-4D51-9D30-A657400B628E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D6A759-9B0B-4D51-9D30-A657400B628E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D6A759-9B0B-4D51-9D30-A657400B628E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,7 @@ Global
 		{763CEE56-CD1D-4C53-8375-7754C1C2E15E} = {5F7361E4-B37D-4C13-A58E-5E02736FC553}
 		{33F7EC15-B73D-49D3-8802-640FE8EC015B} = {5F7361E4-B37D-4C13-A58E-5E02736FC553}
 		{CA83A321-7A4C-4F1E-9B65-434F3F2F0B39} = {5F7361E4-B37D-4C13-A58E-5E02736FC553}
+		{B6D6A759-9B0B-4D51-9D30-A657400B628E} = {A51087A8-F764-426B-AA11-0831F8AE189C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {435D3B7C-16C8-4C37-B02E-1079A62DB68D}

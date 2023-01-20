@@ -6,6 +6,7 @@ namespace MedGrupo.Data.Context
 {
     public  class MedGrupoContext : DbContext
     {
+        public DbSet<ContactEntity> Contacts { get; set; }
         public DbSet<UserEntity> Users { get; set; }
 
         public MedGrupoContext(DbContextOptions<MedGrupoContext> options) : base(options) { }
@@ -13,6 +14,7 @@ namespace MedGrupo.Data.Context
         protected override void OnModelCreating(ModelBuilder modelbuilder)
         {
             base.OnModelCreating(modelbuilder);
+            modelbuilder.Entity<UserEntity>(new UserMap().Configure);
             modelbuilder.Entity<UserEntity>(new UserMap().Configure);
         }
     }

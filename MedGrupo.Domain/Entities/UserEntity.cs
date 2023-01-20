@@ -1,5 +1,4 @@
 ﻿using MedGrupo.Domain.Entities.Base;
-using MedGrupo.Domain.Entities.ValueObjects;
 using MedGrupo.Domain.Validation;
 
 namespace MedGrupo.Domain.Entities
@@ -8,43 +7,41 @@ namespace MedGrupo.Domain.Entities
     {
         public UserEntity()
         {
-            Ativo = true;
+            Active = true;
 
         }
-        public UserEntity(string login, string senha, Nome nome, bool ativo, string email)
+        public UserEntity(string login, string senha, string nome, bool ativo, string email)
         {
             ValidationDomain(login, senha, nome, ativo, email);
         }
 
-        public void Update(string login, string senha, Nome nome, bool ativo, string email)
+        public void Update(string login, string password, string name, bool active, string email)
         {
             Login = login;
-            Senha = senha;
-            Nome = nome;
+            Password = password;
+            Nome = name;
             Email = email;
-            Ativo = ativo;
+            Active = active;
         }
 
         public string Login { get; private set; }
-        public string Senha { get; private set; }
-        public Nome Nome { get; private set; }
+        public string Password { get; private set; }
+        public string Nome { get; private set; }
         public string Email { get; private set; }
-        public bool Ativo { get; private set; }
+        public bool Active { get; private set; }
 
-        private void ValidationDomain(string login, string senha, Nome nome, bool ativo, string email)
+        private void ValidationDomain(string login, string password, string name, bool active, string email)
         {
-            DomainExceptionValidation.When(nome == null, "O nome é obrigatório. ");
-            DomainExceptionValidation.When(string.IsNullOrEmpty(nome.FirstName), "O nome é obrigatório. ");
-            DomainExceptionValidation.When(string.IsNullOrEmpty(nome.LastName), "O sobrenome é obrigatório. ");
-            DomainExceptionValidation.When(nome.FirstName.Length < 3, "O nome precisa ter no minimo 3 caracteres.");
+            DomainExceptionValidation.When(name == null, "O nome é obrigatório. ");
+            DomainExceptionValidation.When(string.IsNullOrEmpty(name), "O nome é obrigatório. ");
             DomainExceptionValidation.When(string.IsNullOrWhiteSpace(login), "O login é obrigatório. ");
-            DomainExceptionValidation.When(string.IsNullOrWhiteSpace(senha), "A senha é obrigatória. ");
+            DomainExceptionValidation.When(string.IsNullOrWhiteSpace(password), "A senha é obrigatória. ");
             DomainExceptionValidation.When(string.IsNullOrWhiteSpace(email), "O e-mail é obrigatória. ");
             Login = login;
-            Senha = senha;
-            Nome = nome;
+            Password = password;
+            Nome = name;
             Email = email;
-            Ativo = ativo;
+            Active = active;
         }
     }
 }

@@ -1,23 +1,22 @@
-﻿using MedGrupo.Domain.Interfaces.Services.User;
-using Microsoft.AspNetCore.Authorization;
+﻿using MedGrupo.Domain.Dtos.Contact;
+using MedGrupo.Domain.Interfaces.Services.Contact;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Net;
 using System.Threading.Tasks;
-using System;
-using MedGrupo.Domain.Dtos.User;
 
 namespace MedGrupo.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class ContactController : ControllerBase
     {
-        private IUserService _service;
-        public UsersController(IUserService service)
+        private IContactService _service;
+        public ContactController (IContactService service)
         {
             this._service = service;
         }
-        [Authorize("Bearer")]
+        //[Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -34,7 +33,7 @@ namespace MedGrupo.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id}", Name = "GetUserWithId")]
+        [Route("{id}", Name = "GetContactWithId")]
         public async Task<ActionResult> Get(Guid id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -50,15 +49,15 @@ namespace MedGrupo.API.Controllers
         }
         //[Authorize("Bearer")]
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] UserDto user)
+        public async Task<ActionResult> Post([FromBody] ContactDto contato)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
             {
-                var result = await _service.Post(user);
+                var result = await _service.Post(contato);
                 if (result == null) return BadRequest();
 
-                return Created(new Uri(Url.Link("GetUserWithId", new { id = result.Id })), result);
+                return Created(new Uri(Url.Link("GetContactWithId", new { id = result.Id })), result);
 
             }
             catch (ArgumentException e)
@@ -67,14 +66,14 @@ namespace MedGrupo.API.Controllers
             }
 
         }
-        [Authorize("Bearer")]
+        //[Authorize("Bearer")]
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] UserDto user)
+        public async Task<ActionResult> Put([FromBody] ContactDto contact)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
             {
-                var result = await _service.Put(user);
+                var result = await _service.Put(contact);
                 if (result == null) return BadRequest();
 
                 return Ok(result);
@@ -84,7 +83,7 @@ namespace MedGrupo.API.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [Authorize("Bearer")]
+        //[Authorize("Bearer")]
         [HttpDelete]
         public async Task<ActionResult> Delete(Guid id)
         {

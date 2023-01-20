@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MedGrupo.Domain.Dtos
+namespace MedGrupo.Domain.Dtos.User
 {
     public class UserDtoCreateResult : UserDto
     {

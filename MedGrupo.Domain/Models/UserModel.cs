@@ -1,5 +1,4 @@
-﻿using MedGrupo.Domain.Entities.ValueObjects;
-using System;
+﻿using System;
 
 namespace MedGrupo.Domain.Models
 {
@@ -29,9 +28,9 @@ namespace MedGrupo.Domain.Models
             set { _email = value; }
         }
 
-        private Nome _nome;
+        private string _nome;
 
-        public Nome nome
+        public string nome
         {
             get { return _nome; }
             set { _nome = value; }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MedGrupo.CrossCutting.Helper;
-using MedGrupo.Domain.Dtos;
+using MedGrupo.Domain.Dtos.User;
 using MedGrupo.Domain.Entities;
 using MedGrupo.Domain.Interfaces.Repositories;
 using MedGrupo.Domain.Interfaces.Services.User;

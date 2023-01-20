@@ -1,6 +1,6 @@
 ﻿namespace MedGrupo.Domain.Enums
 {
-    public enum SexoEnum
+    public enum GenderEnum
     {
         Masculino,
         Feminino,

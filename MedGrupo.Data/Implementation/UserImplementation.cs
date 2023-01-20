@@ -17,7 +17,7 @@ namespace MedGrupo.Data.Implementation
 
         public async Task<UserEntity> FindByLogin(string login, string password)
         {
-            return await _dataSet.FirstOrDefaultAsync(u => u.Login.Equals(login) && u.Senha.Equals(password));
+            return await _dataSet.FirstOrDefaultAsync(u => u.Login.Equals(login) && u.Password.Equals(password));
         }
     }
 }

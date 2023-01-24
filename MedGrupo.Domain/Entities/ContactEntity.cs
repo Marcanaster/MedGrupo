@@ -28,7 +28,7 @@ namespace MedGrupo.Domain.Entities
         {
             DomainExceptionValidation.When(name == null, "O nome é obrigatório. ");
             DomainExceptionValidation.When(string.IsNullOrEmpty(name), "O nome é obrigatório. ");
-            DomainExceptionValidation.When((Util.CalculaIdade(dateOfBirth, DateTime.Now) < 18), "O contato não pode ser menor de idade");
+            DomainExceptionValidation.When((Util.CalculaIdade(dateOfBirth) < 18), "O contato não pode ser menor de idade");
 
             Nome = name;
             DateOfBirth = dateOfBirth;

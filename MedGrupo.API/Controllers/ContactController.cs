@@ -1,5 +1,6 @@
 ﻿using MedGrupo.Domain.Dtos.Contact;
 using MedGrupo.Domain.Interfaces.Services.Contact;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -16,7 +17,7 @@ namespace MedGrupo.API.Controllers
         {
             this._service = service;
         }
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {

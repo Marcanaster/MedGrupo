@@ -14,7 +14,6 @@ namespace MedGrupo.Data.Mapping
             builder.Property(c => c.Nome).IsRequired().HasMaxLength(100);
             builder.Property(c => c.DateOfBirth).IsRequired();
             builder.Property(c => c.Gender);
-
         }
     }
 }

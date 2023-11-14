@@ -13,5 +13,6 @@ namespace MedGrupo.Domain.Interfaces.Repositories
         Task<T> GetAsync(Guid id);
         Task<IEnumerable<T>> GetAllAsync();
         Task<bool> ExistAsync(Guid id);
+
     }
 }

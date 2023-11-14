@@ -8,8 +8,8 @@ namespace MedGrupo.Domain.Entities
         public UserEntity()
         {
             Active = true;
-
         }
+
         public UserEntity(string login, string senha, string nome, bool ativo, string email)
         {
             ValidationDomain(login, senha, nome, ativo, email);
